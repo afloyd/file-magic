@@ -1,0 +1,23 @@
+{
+	"name"    : "file-magic",
+	"version" : "0.0.1",
+	"description": "Map file structure to object",
+	"keywords": [
+		"require",
+		"file-magic",
+		"file map",
+		"map for exports"
+	],
+	"author": {
+		"name": "Austin Floyd",
+		"email": "texsc98@gmail.com"
+	},
+	"main": "index",
+	"engines": {
+		"node": ">= 0.8.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/afloyd/file-magic"
+	}
+}
