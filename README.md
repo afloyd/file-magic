@@ -5,7 +5,7 @@ An extremely useful function that can recursively look through a given directory
 contained files into an object you choose
 
 ```
-require('map-to-object').mapForExports(
+require('file-magic').mapForExports(
 	{
 		path : './routes',
 		recursive : true,
@@ -17,7 +17,7 @@ require('map-to-object').mapForExports(
 ```
 
 The above will recursive go through your entire `routes` folder, requiring all `.js` files passing in the `app` object
-for them to use. Any dashed file-names will be come camel cased fileNames on the object
+for them to use. Any dashed `file-names` will be come camel cased `fileNames` on the object
 
 More documentation to come...
 
