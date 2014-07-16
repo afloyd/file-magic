@@ -1,6 +1,6 @@
 {
 	"name"    : "file-magic",
-	"version" : "0.0.1",
+	"version" : "0.1.0",
 	"description": "Map file structure to object",
 	"keywords": [
 		"require",

@@ -22,9 +22,9 @@ exports.get = function getFilePaths (pathToSearch, opts) {
 		getNames = opts.getNames || false,
 		results = [];
 	var files = fs.readdirSync(path.resolve(pathToSearch))
-			.map(function (fileName) {
-				return path.resolve(pathToSearch, fileName);
-			});
+		.map(function (fileName) {
+			return path.resolve(pathToSearch, fileName);
+		});
 	files.forEach(function (filePath) {
 		var fileName = filePath.split(path.sep).pop();
 		fileName = fileName.substring(0, fileName.length - extension.length);
@@ -66,9 +66,11 @@ exports.get = function getFilePaths (pathToSearch, opts) {
 
 exports.mapForExports = function mapForExports(opts) {
 	if (!opts.path || !opts.exports) { return console.error('path or exports not specified');}
+	opts.path = opts.path.replace(/(\/|\\)/gi, path.sep);
+	opts.path = path.resolve(opts.path);
 	opts.getNames = true;
 	var libraries = exports.get(opts.path, opts),
-			exportsOpts = opts.exportsOpts;
+		exportsOpts = opts.exportsOpts;
 
 	libraries.sort(function (a, b) {
 		if (a < b) return -1;
